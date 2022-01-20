@@ -15,13 +15,14 @@
  */
 class Solution {
     public int maxDepth(TreeNode root) {
+        //recursion
         // if(root==null)
         //     return 0;
         // return Math.max(maxDepth(root.left), maxDepth(root.right))+1;
-        
+        //simple bfs
         Queue<TreeNode> q=new LinkedList<TreeNode>();
         int depth=0;
-        List<List<Integer>> op=new ArrayList<>();
+        //List<List<Integer>> op=new ArrayList<>();
         if(root==null){
             return depth;
         }
@@ -41,7 +42,7 @@ class Solution {
                     q.add(temp.right); 
                 
             }
-            op.add(ls);
+            
         }
        // return op;
         return depth;
