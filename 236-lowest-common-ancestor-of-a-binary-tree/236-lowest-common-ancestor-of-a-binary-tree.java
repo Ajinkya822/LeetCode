@@ -9,6 +9,7 @@
  */
 class Solution {
     int target=7;
+    
     List<TreeNode> op1=new LinkedList<>();
     List<TreeNode> op2=new LinkedList<>();
     boolean isFoundp=false;
@@ -17,8 +18,6 @@ class Solution {
         //find path using dfs
             findpathp(root,p);
             findpathq(root,q);
-            //System.out.print(op1);
-            //System.out.print(op2);
             int i=0;
             while(true){
                 if(i<op1.size() && i<op2.size() && op1.get(i).val==op2.get(i).val){
@@ -28,8 +27,9 @@ class Solution {
                     return op1.get(i-1);
                 }
             }
-            //return root;
-        }
+            
+    }
+    
     public List<TreeNode> findpathp(TreeNode root, TreeNode p){
             if(root==null)
                 return null;
